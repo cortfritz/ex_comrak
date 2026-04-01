@@ -1,0 +1,18 @@
+[package]
+name = "comrak_nif"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "comrak_nif"
+crate-type = ["cdylib"]
+
+[dependencies]
+rustler = "0.36"
+comrak = { version = "0.51", default-features = false }
+
+[features]
+default = []
+nif_version_2_15 = ["rustler/nif_version_2_15"]
+nif_version_2_16 = ["rustler/nif_version_2_16"]
+nif_version_2_17 = ["rustler/nif_version_2_17"]
